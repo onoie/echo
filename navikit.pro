@@ -1,5 +1,5 @@
 TEMPLATE    = subdirs
-SUBDIRS	    = echowindow \
+SUBDIRS	    = core \
               plugin
 
 #QT       += core gui

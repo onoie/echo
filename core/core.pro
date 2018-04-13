@@ -1,8 +1,8 @@
 QT += widgets
 
-HEADERS    = echowindow.h \
-             echointerface.h
-SOURCES    = echowindow.cpp \
+HEADERS    = core.h \
+             interface/echointerface.h
+SOURCES    = core.cpp \
              main.cpp
 
 TARGET     = echoplugin
