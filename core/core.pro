@@ -1,7 +1,8 @@
+
 QT += widgets
 
 HEADERS    = core.h \
-             interface/echointerface.h
+             echointerface.h
 SOURCES    = core.cpp \
              main.cpp
 
@@ -13,9 +14,3 @@ win32 {
 } else {
     DESTDIR    = ../
 }
-
-## install
-#target.path = $$[QT_INSTALL_EXAMPLES]/widgets/tools/echoplugin
-#INSTALLS += target
-
-#CONFIG += install_ok  # Do not cargo-cult this!

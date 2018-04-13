@@ -1,12 +1,10 @@
 
-
 #include <QtWidgets>
 
 #include "core.h"
-#include "interface/echointerface.h"
+#include "echointerface.h"
 
-int main(int argv, char *args[])
-{
+int main(int argv, char *args[]){
     QApplication app(argv, args);
 
     Core window;

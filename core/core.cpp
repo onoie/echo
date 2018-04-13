@@ -1,9 +1,9 @@
+
 #include <QtWidgets>
 
 #include "core.h"
 
-Core::Core()
-{
+Core::Core(){
     createGUI();
     setLayout(layout);
     setWindowTitle("Echo Plugin Example");
@@ -14,19 +14,13 @@ Core::Core()
         button->setEnabled(false);
     }
 }
-//! [0]
 
-//! [1]
-void Core::sendEcho()
-{
+void Core::sendEcho(){
     QString text = echoInterface->echo(lineEdit->text());
     label->setText(text);
 }
-//! [1]
 
-//! [2]
-void Core::createGUI()
-{
+void Core::createGUI(){
     lineEdit = new QLineEdit;
     label = new QLabel;
     label->setFrameStyle(QFrame::Box | QFrame::Plain);
@@ -45,11 +39,8 @@ void Core::createGUI()
     layout->addWidget(button, 2, 1, Qt::AlignRight);
     layout->setSizeConstraint(QLayout::SetFixedSize);
 }
-//! [2]
 
-//! [3]
-bool Core::loadPlugin()
-{
+bool Core::loadPlugin(){
     QDir pluginsDir(qApp->applicationDirPath());
 #if defined(Q_OS_WIN)
     if (pluginsDir.dirName().toLower() == "debug" || pluginsDir.dirName().toLower() == "release")
@@ -71,7 +62,5 @@ bool Core::loadPlugin()
                 return true;
         }
     }
-
     return false;
 }
-//! [3]

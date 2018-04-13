@@ -4,7 +4,7 @@
 
 #include <QWidget>
 
-#include "interface/echointerface.h"
+#include "echointerface.h"
 
 QT_BEGIN_NAMESPACE
 class QString;
@@ -14,17 +14,12 @@ class QPushButton;
 class QGridLayout;
 QT_END_NAMESPACE
 
-
-class Core : public QWidget
-{
+class Core : public QWidget{
     Q_OBJECT
-
 public:
     Core();
-
 private slots:
     void sendEcho();
-
 private:
     void createGUI();
     bool loadPlugin();
